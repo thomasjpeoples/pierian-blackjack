@@ -1,23 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Blackjack Game
+# Blackjack Game
 
-# In[ ]:
-
-
-#!/usr/bin/env python
-# coding: utf-8
 
 # Set up the game as a WebApp
-from flask import Flask
-app = Flask(__name__)
+# from flask import Flask
+# app = Flask(__name__)
 
-@app.route('/')
-
-
-# In[59]:
-
+#@app.route('/')
 
 import random
 
@@ -28,9 +19,6 @@ values = {'Two':2, 'Three':3, 'Four':4, 'Five':5, 'Six':6, 'Seven':7, 'Eight':8,
 playing = True
 
 
-# In[60]:
-
-
 class Card:
     
     def __init__(self, suit, rank):
@@ -39,9 +27,6 @@ class Card:
     
     def __str__(self):
         return self.rank + ' of ' + self.suit
-
-
-# In[61]:
 
 
 class Deck:
@@ -66,9 +51,6 @@ class Deck:
         return single_card
 
 
-# In[62]:
-
-
 class Hand:
     
     def __init__(self):
@@ -88,9 +70,6 @@ class Hand:
             self.aces -= 1 
 
 
-# In[ ]:
-
-
 class Chips:
     
     def __init__(self, total=100):
@@ -103,8 +82,6 @@ class Chips:
     def lose_bet(self):
         self.total -= self.bet
 
-
-# In[ ]:
 
 
 def take_bet(chips):
@@ -121,16 +98,10 @@ def take_bet(chips):
                 break
 
 
-# In[ ]:
-
-
 def hit(deck,hand):
     
     hand.add_card(deck.deal())
     hand.adjust_for_ace()
-
-
-# In[ ]:
 
 
 def hit_or_stand(deck,hand):
@@ -151,10 +122,6 @@ def hit_or_stand(deck,hand):
             continue
         break
 
-
-# In[ ]:
-
-
 def show_some(player,dealer):
     print("\nDealer's Hand:")
     print(" <card hidden>")
@@ -167,8 +134,6 @@ def show_all(player,dealer):
     print("\nPlayer's Hand:", *player.cards, sep='\n ')
     print("Player's Hand =",player.value)
 
-
-# In[ ]:
 
 
 def player_busts(player,dealer,chips):
@@ -189,9 +154,6 @@ def dealer_wins(player,dealer,chips):
     
 def push(player,dealer):
     print("Dealer and Player tie! It's a push.")
-
-
-# In[ ]:
 
 
 while True:
