@@ -1,14 +1,4 @@
-docutils==0.14
-Flask==1.0.2
-Flask-Compress==1.4.0
-Flask-Cors==3.0.7
-html5lib==1.0.1
-idna==2.8
-numba==0.41.0
-numexpr==2.6.8
-numpy==1.15.4
-numpydoc==0.8.0
+Flask
 django
 gunicorn
 django-heroku
-pandas
