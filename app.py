@@ -3,12 +3,11 @@
 
 # Blackjack Game
 
-
 # Set up the game as a WebApp
-# from flask import Flask
-# app = Flask(__name__)
+from flask import Flask
+app = Flask(__name__)
 
-#@app.route('/')
+@app.route('/')
 
 import random
 
